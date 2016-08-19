@@ -10,107 +10,107 @@ using SGA.Models;
 
 namespace SGA.Controllers
 {
-    public class PersonasController : Controller
+    public class ClientesController : Controller
     {
         private SGAContext db = new SGAContext();
 
-        // GET: Personas
+        // GET: Clientes
         public ActionResult Index()
         {
-            return View(db.personas.ToList());
+            return View(db.clientes.ToList());
         }
 
-        // GET: Personas/Details/5
+        // GET: Clientes/Details/5
         public ActionResult Details(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Persona persona = db.personas.Find(id);
-            if (persona == null)
+            Cliente cliente = db.clientes.Find(id);
+            if (cliente == null)
             {
                 return HttpNotFound();
             }
-            return View(persona);
+            return View(cliente);
         }
 
-        // GET: Personas/Create
+        // GET: Clientes/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Personas/Create
+        // POST: Clientes/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "clave,nombre,pais,telefono,correo,direccion,apellidos,contrasena,sexo,profesion,institucion,rutaFoto,correoAlternativo")] Persona persona)
+        public ActionResult Create([Bind(Include = "clave,nombre,pais,telefono,correo,direccion")] Cliente cliente)
         {
             if (ModelState.IsValid)
             {
-                db.personas.Add(persona);
+                db.clientes.Add(cliente);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(persona);
+            return View(cliente);
         }
 
-        // GET: Personas/Edit/5
+        // GET: Clientes/Edit/5
         public ActionResult Edit(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Persona persona = db.personas.Find(id);
-            if (persona == null)
+            Cliente cliente = db.clientes.Find(id);
+            if (cliente == null)
             {
                 return HttpNotFound();
             }
-            return View(persona);
+            return View(cliente);
         }
 
-        // POST: Personas/Edit/5
+        // POST: Clientes/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "clave,nombre,pais,telefono,correo,direccion,apellidos,contrasena,sexo,profesion,institucion,rutaFoto,correoAlternativo")] Persona persona)
+        public ActionResult Edit([Bind(Include = "clave,nombre,pais,telefono,correo,direccion")] Cliente cliente)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(persona).State = EntityState.Modified;
+                db.Entry(cliente).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(persona);
+            return View(cliente);
         }
 
-        // GET: Personas/Delete/5
+        // GET: Clientes/Delete/5
         public ActionResult Delete(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Persona persona = db.personas.Find(id);
-            if (persona == null)
+            Cliente cliente = db.clientes.Find(id);
+            if (cliente == null)
             {
                 return HttpNotFound();
             }
-            return View(persona);
+            return View(cliente);
         }
 
-        // POST: Personas/Delete/5
+        // POST: Clientes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            Persona persona = db.personas.Find(id);
-            db.personas.Remove(persona);
+            Cliente cliente = db.clientes.Find(id);
+            db.clientes.Remove(cliente);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

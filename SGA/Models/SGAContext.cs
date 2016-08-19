@@ -20,7 +20,7 @@ namespace SGA.Models
             Database.SetInitializer<SGAContext>(new DropCreateDatabaseAlways<SGAContext>());
         }
 
-        public DbSet<SGA.Models.Persona> Personas { get; set; }
         public DbSet<Cliente> clientes { get; set; }
+        public DbSet<Persona> personas { get; set; }
     }
 }
