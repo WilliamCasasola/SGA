@@ -9,26 +9,31 @@ namespace SGA.Models
     public class Cliente
     {
         [Key]
-        public String clave { set; get; }
+        public virtual String clave { set; get; }
+
         [Required]
         [StringLength(70)]
         [Display(Name = "Nombre")]
-        public String nombre  { set; get; }
+        public virtual String nombre  { set; get; }
+
         [Required]
         [StringLength(70)]
         [Display(Name = "País")]
-        public String pais { set; get; }
+        public virtual String pais { set; get; }
+
         [Required]
         [StringLength(30)]
         [Display(Name = "Teléfono")]
-        public String telefono { set; get; }
+        public virtual String telefono { set; get; }
+
         [Required]
         [StringLength(70)]
         [Display(Name = "Correo")]
-        public String correo { set; get; }
+        public virtual String correo { set; get; }
+
         [Required]
         [StringLength(70)]
         [Display(Name = "Dirección")]
-        public String direccion { set; get; }
+        public virtual String direccion { set; get; }
     }
 }

@@ -21,6 +21,16 @@ namespace SGA.Models
         }
 
         public DbSet<Cliente> clientes { get; set; }
-        public DbSet<Persona> personas { get; set; }
+        public DbSet<Administrador> administradores { get; set; }
+        public DbSet<Calificacion> calificaciones { get; set; }
+        public DbSet<Curso> cursos { get; set; }
+        public DbSet<Encuesta> encuestas { get; set; }
+        public DbSet<Estudiante> estudiantes { get; set; }
+        public DbSet<Factura> facturas { get; set; }
+        public DbSet<Facturado> facturados { get; set; }
+        public DbSet<Generacion> generaciones { get; set; }
+        public DbSet<Titulo> titulos { get; set; }
+        public DbSet<Tutor> tutores { get; set; }
+
     }
 }

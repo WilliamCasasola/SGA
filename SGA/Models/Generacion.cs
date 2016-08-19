@@ -6,14 +6,13 @@ using System.Web;
 
 namespace SGA.Models
 {
-    public class Titulo:Producto
+    public class Generacion
     {
-        [Required]
+        [Key]
         [Display(Name ="Nombre")]
         public virtual String nombre { set; get; }
 
-        [Display(Name="Foto")]
-        public virtual String rutaFoto { set; get; }
-
+        [Display(Name ="Año")]
+        public virtual String ano { set; get; }
     }
 }

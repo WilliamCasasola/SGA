@@ -176,6 +176,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdministradorsController.cs" />
     <Compile Include="Controllers\ClientesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -184,10 +185,14 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Administrador.cs" />
+    <Compile Include="Models\Calificacion.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Curso.cs" />
+    <Compile Include="Models\Encuesta.cs" />
     <Compile Include="Models\Estudiante.cs" />
     <Compile Include="Models\Factura.cs" />
+    <Compile Include="Models\Facturado.cs" />
+    <Compile Include="Models\Generacion.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Persona.cs" />
@@ -258,6 +263,11 @@
     <Content Include="Views\Clientes\Details.cshtml" />
     <Content Include="Views\Clientes\Edit.cshtml" />
     <Content Include="Views\Clientes\Index.cshtml" />
+    <Content Include="Views\Administradors\Create.cshtml" />
+    <Content Include="Views\Administradors\Delete.cshtml" />
+    <Content Include="Views\Administradors\Details.cshtml" />
+    <Content Include="Views\Administradors\Edit.cshtml" />
+    <Content Include="Views\Administradors\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
