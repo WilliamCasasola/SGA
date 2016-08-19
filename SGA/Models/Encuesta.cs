@@ -10,6 +10,8 @@ namespace SGA.Models
     {
         [Key]
         public virtual int id { set; get; }
+
+        [Display(Name ="Fecha")]
         public virtual DateTime fecha { set; get; }
         public virtual double valoracion { set; get; }
     }
