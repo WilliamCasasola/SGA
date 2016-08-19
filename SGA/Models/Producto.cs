@@ -7,5 +7,6 @@ namespace SGA.Models
 {
     public class Producto
     {
+        public
     }
 }
