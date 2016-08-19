@@ -178,8 +178,15 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdministradoresController.cs" />
     <Compile Include="Controllers\ClientesController.cs" />
+    <Compile Include="Controllers\CursosController.cs" />
+    <Compile Include="Controllers\EstudiantesController.cs" />
+    <Compile Include="Controllers\FacturadosController.cs" />
+    <Compile Include="Controllers\FacturasController.cs" />
+    <Compile Include="Controllers\GeneracionesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\TitulosController.cs" />
+    <Compile Include="Controllers\TutoresController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -268,6 +275,41 @@
     <Content Include="Views\Administradores\Details.cshtml" />
     <Content Include="Views\Administradores\Edit.cshtml" />
     <Content Include="Views\Administradores\Index.cshtml" />
+    <Content Include="Views\Cursos\Create.cshtml" />
+    <Content Include="Views\Cursos\Delete.cshtml" />
+    <Content Include="Views\Cursos\Details.cshtml" />
+    <Content Include="Views\Cursos\Edit.cshtml" />
+    <Content Include="Views\Cursos\Index.cshtml" />
+    <Content Include="Views\Estudiantes\Create.cshtml" />
+    <Content Include="Views\Estudiantes\Delete.cshtml" />
+    <Content Include="Views\Estudiantes\Details.cshtml" />
+    <Content Include="Views\Estudiantes\Edit.cshtml" />
+    <Content Include="Views\Estudiantes\Index.cshtml" />
+    <Content Include="Views\Facturas\Create.cshtml" />
+    <Content Include="Views\Facturas\Delete.cshtml" />
+    <Content Include="Views\Facturas\Details.cshtml" />
+    <Content Include="Views\Facturas\Edit.cshtml" />
+    <Content Include="Views\Facturas\Index.cshtml" />
+    <Content Include="Views\Facturados\Create.cshtml" />
+    <Content Include="Views\Facturados\Delete.cshtml" />
+    <Content Include="Views\Facturados\Details.cshtml" />
+    <Content Include="Views\Facturados\Edit.cshtml" />
+    <Content Include="Views\Facturados\Index.cshtml" />
+    <Content Include="Views\Generaciones\Create.cshtml" />
+    <Content Include="Views\Generaciones\Delete.cshtml" />
+    <Content Include="Views\Generaciones\Details.cshtml" />
+    <Content Include="Views\Generaciones\Edit.cshtml" />
+    <Content Include="Views\Generaciones\Index.cshtml" />
+    <Content Include="Views\Titulos\Create.cshtml" />
+    <Content Include="Views\Titulos\Delete.cshtml" />
+    <Content Include="Views\Titulos\Details.cshtml" />
+    <Content Include="Views\Titulos\Edit.cshtml" />
+    <Content Include="Views\Titulos\Index.cshtml" />
+    <Content Include="Views\Tutores\Create.cshtml" />
+    <Content Include="Views\Tutores\Delete.cshtml" />
+    <Content Include="Views\Tutores\Details.cshtml" />
+    <Content Include="Views\Tutores\Edit.cshtml" />
+    <Content Include="Views\Tutores\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -9,7 +9,8 @@ namespace SGA.Models
     public class Cliente
     {
         [Key]
-        public virtual String clave { set; get; }
+        [Display(Name ="Código")]
+        public virtual String codigo { set; get; }
 
         [Required]
         [StringLength(70)]

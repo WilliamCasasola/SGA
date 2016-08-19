@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -21,11 +22,12 @@ namespace SGA.Models
         [Display(Name ="Cancelado")]
         public virtual Boolean cancelado { set;  get; }
 
+        [ForeignKey("codigo")]
         [Display(Name ="Cliente")]
         public virtual Cliente cliente { set; get; }
 
         [Display(Name ="Facturados")]
-        public virtual List<Facturado> facturados { set; get; }
+        public virtual ICollection<Facturado> facturados { set; get; }
 
     }
 }

@@ -25,9 +25,15 @@ namespace SGA.Models
         public virtual int cantidadHoras { set; get; }
 
         [Display(Name ="Tutores")]
-        public virtual List<Tutor> tutores { set; get; }
+        public virtual ICollection<Tutor> tutores { set; get; }
 
         [Display(Name ="Calificaciones")]
-        public virtual List<Calificacion> calificaciones { set; get; }
+        public virtual ICollection<Calificacion> calificaciones { set; get; }
+
+        [Display(Name ="Estudiantes")]
+        public virtual ICollection<Estudiante> estudiantes { set; get; }
+    
+        [Display(Name ="Generaciones")]
+        public virtual ICollection<Generacion> generaciones { set; get; }
     }
 }

@@ -1,0 +1,114 @@
+﻿@model SGA.Models.Estudiante
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Estudiante</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pais)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pais)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.correo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.correo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apellidos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apellidos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.contrasena)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.contrasena)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sexo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sexo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.profesion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.profesion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.institucion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.institucion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rutaFoto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rutaFoto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.correoAlternativo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.correoAlternativo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.clave }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

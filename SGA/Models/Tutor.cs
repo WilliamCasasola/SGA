@@ -9,6 +9,6 @@ namespace SGA.Models
     public class Tutor:Persona
     {
         [Display(Name ="Cursos")]
-        public virtual List<Curso> cursos { set; get; }
+        public virtual ICollection<Curso> cursos { set; get; }
     }
 }

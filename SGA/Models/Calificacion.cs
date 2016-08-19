@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -9,6 +10,7 @@ namespace SGA.Models
     public class Calificacion
     {
         [Key]
+        [ForeignKey("codigo")]
         [Display(Name = "Curso")]
         public virtual Curso curso { set; get; }
 
@@ -20,6 +22,7 @@ namespace SGA.Models
         public virtual String tipo { set; get; }
 
         [Key]
+        [ForeignKey("codigo")]
         [Display(Name ="Estudiante")]
         public virtual Estudiante estudiante { set; get; }
 

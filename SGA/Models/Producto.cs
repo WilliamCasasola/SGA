@@ -6,7 +6,7 @@ using System.Web;
 
 namespace SGA.Models
 {
-    public class Producto
+    public abstract class Producto
     {
         [Key]
         [Display(Name ="Código")]

@@ -9,9 +9,9 @@ namespace SGA.Models
     public class Administrador:Persona
     {
         [Display(Name ="Morosos")]
-        public virtual List<Cliente> morosos { set; get; }
+        public virtual ICollection<Cliente> morosos { set; get; }
 
         [Display(Name ="Congelados")]
-        public virtual List<Estudiante> congelados { set; get; }
+        public virtual ICollection<Estudiante> congelados { set; get; }
     }
 }
