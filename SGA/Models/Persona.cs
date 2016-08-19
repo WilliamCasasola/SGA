@@ -7,7 +7,7 @@ using System.Web;
 
 namespace SGA.Models
 {
-    public class Persona : Cliente
+    public abstract class Persona : Cliente
     {
       
         [Required]

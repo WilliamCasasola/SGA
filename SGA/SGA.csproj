@@ -176,7 +176,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\AdministradorsController.cs" />
+    <Compile Include="Controllers\AdministradoresController.cs" />
     <Compile Include="Controllers\ClientesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -263,11 +263,11 @@
     <Content Include="Views\Clientes\Details.cshtml" />
     <Content Include="Views\Clientes\Edit.cshtml" />
     <Content Include="Views\Clientes\Index.cshtml" />
-    <Content Include="Views\Administradors\Create.cshtml" />
-    <Content Include="Views\Administradors\Delete.cshtml" />
-    <Content Include="Views\Administradors\Details.cshtml" />
-    <Content Include="Views\Administradors\Edit.cshtml" />
-    <Content Include="Views\Administradors\Index.cshtml" />
+    <Content Include="Views\Administradores\Create.cshtml" />
+    <Content Include="Views\Administradores\Delete.cshtml" />
+    <Content Include="Views\Administradores\Details.cshtml" />
+    <Content Include="Views\Administradores\Edit.cshtml" />
+    <Content Include="Views\Administradores\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

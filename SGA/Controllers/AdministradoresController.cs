@@ -10,17 +10,17 @@ using SGA.Models;
 
 namespace SGA.Controllers
 {
-    public class AdministradorsController : Controller
+    public class AdministradoresController : Controller
     {
         private SGAContext db = new SGAContext();
 
-        // GET: Administradors
+        // GET: Administradores
         public ActionResult Index()
         {
-            return View(db.clientes.ToList());
+            return View(db.administradores.ToList());
         }
 
-        // GET: Administradors/Details/5
+        // GET: Administradores/Details/5
         public ActionResult Details(string id)
         {
             if (id == null)
@@ -35,13 +35,13 @@ namespace SGA.Controllers
             return View(administrador);
         }
 
-        // GET: Administradors/Create
+        // GET: Administradores/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Administradors/Create
+        // POST: Administradores/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -50,7 +50,7 @@ namespace SGA.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.clientes.Add(administrador);
+                db.administradores.Add(administrador);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -58,7 +58,7 @@ namespace SGA.Controllers
             return View(administrador);
         }
 
-        // GET: Administradors/Edit/5
+        // GET: Administradores/Edit/5
         public ActionResult Edit(string id)
         {
             if (id == null)
@@ -73,7 +73,7 @@ namespace SGA.Controllers
             return View(administrador);
         }
 
-        // POST: Administradors/Edit/5
+        // POST: Administradores/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -89,7 +89,7 @@ namespace SGA.Controllers
             return View(administrador);
         }
 
-        // GET: Administradors/Delete/5
+        // GET: Administradores/Delete/5
         public ActionResult Delete(string id)
         {
             if (id == null)
@@ -104,13 +104,13 @@ namespace SGA.Controllers
             return View(administrador);
         }
 
-        // POST: Administradors/Delete/5
+        // POST: Administradores/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
             Administrador administrador = db.administradores.Find(id);
-            db.clientes.Remove(administrador);
+            db.administradores.Remove(administrador);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
