@@ -12,7 +12,6 @@ namespace SGA.Models
         [Key]
         public virtual int id { set; get; }
 
-        [ForeignKey("codigo")]
         [Display(Name ="Estudiante")]
         public virtual Estudiante estudiante { set; get; }
 

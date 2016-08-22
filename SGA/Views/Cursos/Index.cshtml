@@ -12,15 +12,6 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.precio)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.nombre)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.rutaFoto)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.codigoCurso)
         </th>
         <th>
@@ -35,20 +26,20 @@
         <th>
             @Html.DisplayNameFor(model => model.cantidadHoras)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rutaFoto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precio)
+        </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.precio)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.nombre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.rutaFoto)
-        </td>
         <td>
             @Html.DisplayFor(modelItem => item.codigoCurso)
         </td>
@@ -63,6 +54,15 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.cantidadHoras)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rutaFoto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precio)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.codigo }) |

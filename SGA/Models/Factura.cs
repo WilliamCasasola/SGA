@@ -22,7 +22,6 @@ namespace SGA.Models
         [Display(Name ="Cancelado")]
         public virtual Boolean cancelado { set;  get; }
 
-        [ForeignKey("codigo")]
         [Display(Name ="Cliente")]
         public virtual Cliente cliente { set; get; }
 
