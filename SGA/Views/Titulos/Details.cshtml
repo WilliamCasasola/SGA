@@ -11,6 +11,14 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
+            @Html.DisplayNameFor(model => model.precio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precio)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.nombre)
         </dt>
 
@@ -26,17 +34,9 @@
             @Html.DisplayFor(model => model.rutaFoto)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.precio)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.precio)
-        </dd>
-
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.codigo }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProductoId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

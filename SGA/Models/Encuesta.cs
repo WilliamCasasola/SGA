@@ -8,11 +8,10 @@ namespace SGA.Models
 {
     public class Encuesta
     {
-        [Key]
-        public virtual int id { set; get; }
+        public virtual int EncuestaId { set; get; }
 
         [Display(Name ="Fecha")]
-        public virtual DateTime fecha { set; get; }
-        public virtual double valoracion { set; get; }
+        public DateTime fecha { set; get; }
+        public double valoracion { set; get; }
     }
 }

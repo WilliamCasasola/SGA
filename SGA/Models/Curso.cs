@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -8,21 +9,23 @@ namespace SGA.Models
 {
     public class Curso:Titulo
     {
-        
         [Display(Name ="Código")]
-        public virtual String codigoCurso { set; get; }
+        public String codigoCurso { set; get; }
+
+       // [ForeignKey("TituloId")]
+        public virtual Titulo titulo { set; get; }
 
         [Display(Name ="Fecha de Inicio")]
-        public virtual DateTime fechaInicio { set; get; }
+        public DateTime fechaInicio { set; get; }
 
         [Display(Name ="Fecha de Finalización")]
-        public virtual DateTime fechaFinal { set; get; }
+        public DateTime fechaFinal { set; get; }
 
         [Display(Name ="Estado")]
-        public virtual String estado { set; get; }
+        public String estado { set; get; }
 
         [Display(Name ="Cantidad de Horas")]
-        public virtual int cantidadHoras { set; get; }
+        public int cantidadHoras { set; get; }
 
         [Display(Name ="Tutores")]
         public virtual ICollection<Tutor> tutores { set; get; }
@@ -30,9 +33,11 @@ namespace SGA.Models
         [Display(Name ="Calificaciones")]
         public virtual ICollection<Calificacion> calificaciones { set; get; }
 
+        public virtual String codigoCarnet { set; get; }
         [Display(Name ="Estudiantes")]
         public virtual ICollection<Estudiante> estudiantes { set; get; }
     
+
         [Display(Name ="Generaciones")]
         public virtual ICollection<Generacion> generaciones { set; get; }
     }

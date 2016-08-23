@@ -8,6 +8,7 @@ namespace SGA.Models
 {
     public class Estudiante : Persona
     {
+        
         [Display(Name ="Cursos")]
         public virtual ICollection<Curso> cursos { set; get; }
     }

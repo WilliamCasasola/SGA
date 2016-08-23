@@ -8,13 +8,14 @@ namespace SGA.Models
 {
     public abstract class Producto
     {
-        [Key]
         [Display(Name ="Código")]
-        public virtual String codigo { set; get; }
+        public String ProductoId { set; get; }
 
 
         [Display(Name ="Precio")]
-        public virtual Double precio { set; get;}
+        public Double precio { set; get;}
+
+        public virtual ICollection<Titulo> titulos { set; get; }
         
 
     }

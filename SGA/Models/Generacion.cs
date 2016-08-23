@@ -8,11 +8,12 @@ namespace SGA.Models
 {
     public class Generacion
     {
-        [Key]
         [Display(Name ="Nombre")]
-        public virtual String nombre { set; get; }
+        public String GeneracionId { set; get; }
 
         [Display(Name ="Año")]
-        public virtual String ano { set; get; }
+        public String ano { set; get; }
+
+        public virtual ICollection<Curso> cursos { set;  get; }
     }
 }

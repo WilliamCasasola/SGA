@@ -9,11 +9,12 @@ namespace SGA.Models
 {
     public class Facturado
     {
-        [Key]
-        public virtual int id { set; get; }
+        public int FacturadoId { set; get; }
 
         [Display(Name ="Estudiante")]
         public virtual Estudiante estudiante { set; get; }
+        public String ClienteId { set; get; }
+
 
         [Display(Name = "Productos")]
         public virtual ICollection<Producto> productos { set; get; }

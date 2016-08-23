@@ -32,5 +32,6 @@ namespace SGA.Models
         public DbSet<Titulo> titulos { get; set; }
         public DbSet<Tutor> tutores { get; set; }
 
+        public System.Data.Entity.DbSet<SGA.Models.Producto> Productoes { get; set; }
     }
 }

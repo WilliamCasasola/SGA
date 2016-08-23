@@ -17,7 +17,7 @@ namespace SGA.Controllers
         // GET: Tutores
         public ActionResult Index()
         {
-            return View(db.clientes.ToList());
+            return View(db.tutores.ToList());
         }
 
         // GET: Tutores/Details/5
@@ -27,7 +27,7 @@ namespace SGA.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Tutor tutor = db.clientes.Find(id);
+            Tutor tutor = db.tutores.Find(id);
             if (tutor == null)
             {
                 return HttpNotFound();
@@ -46,11 +46,11 @@ namespace SGA.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "codigo,nombre,pais,telefono,correo,direccion,apellidos,contrasena,sexo,profesion,institucion,rutaFoto,correoAlternativo")] Tutor tutor)
+        public ActionResult Create([Bind(Include = "ClienteId,nombre,pais,telefono,correo,direccion,apellidos,contrasena,sexo,profesion,institucion,rutaFoto,correoAlternativo")] Tutor tutor)
         {
             if (ModelState.IsValid)
             {
-                db.clientes.Add(tutor);
+                db.tutores.Add(tutor);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -65,7 +65,7 @@ namespace SGA.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Tutor tutor = db.clientes.Find(id);
+            Tutor tutor = db.tutores.Find(id);
             if (tutor == null)
             {
                 return HttpNotFound();
@@ -78,7 +78,7 @@ namespace SGA.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "codigo,nombre,pais,telefono,correo,direccion,apellidos,contrasena,sexo,profesion,institucion,rutaFoto,correoAlternativo")] Tutor tutor)
+        public ActionResult Edit([Bind(Include = "ClienteId,nombre,pais,telefono,correo,direccion,apellidos,contrasena,sexo,profesion,institucion,rutaFoto,correoAlternativo")] Tutor tutor)
         {
             if (ModelState.IsValid)
             {
@@ -96,7 +96,7 @@ namespace SGA.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Tutor tutor = db.clientes.Find(id);
+            Tutor tutor = db.tutores.Find(id);
             if (tutor == null)
             {
                 return HttpNotFound();
@@ -109,8 +109,8 @@ namespace SGA.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            Tutor tutor = db.clientes.Find(id);
-            db.clientes.Remove(tutor);
+            Tutor tutor = db.tutores.Find(id);
+            db.tutores.Remove(tutor);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
